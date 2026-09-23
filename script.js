@@ -10,7 +10,7 @@ document.querySelector("form").addEventListener("submit", async function(event) 
         sleep_hours: document.querySelector('input[name="sleep_hours"]').value
     };
 
-    const response = await fetch("https://student-performance-prediction-ygki.onrender.com/predict", {
+    const response = await fetch("https://student-performance-prediction-3-shwv.onrender.com", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -21,5 +21,5 @@ document.querySelector("form").addEventListener("submit", async function(event) 
     const result = await response.json();
 
     document.querySelector(".result").innerHTML =
-        "<h2>Result: " + result.result + "</h2>";
+        "<h2>Result: " + result.prediction + "</h2>";
 });
