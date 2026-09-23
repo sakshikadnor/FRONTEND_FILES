@@ -22,4 +22,5 @@ document.querySelector("form").addEventListener("submit", async function(event) 
 
     document.querySelector(".result").innerHTML =
         "<h2>Result: " + result.prediction + "</h2>";
+    document.queryselector("form").reset();
 });
